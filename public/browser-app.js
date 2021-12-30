@@ -92,6 +92,7 @@ const deleteTask = async (e) => {
   } catch (error) {
     console.log(error);
   }
+  backToDefault();
 };
 const editTask = (e, name, completed) => {
   const deleteElement = e.currentTarget.parentElement.parentElement;
