@@ -18,24 +18,30 @@
       referrerpolicy="no-referrer"
     />
     <title>Todo List</title>
+    <link rel="stylesheet" href="./main.css" />
   </head>
   <body class="bg-light">
-    <form class="w-50 mx-auto mt-5 bg-white rounded shadow text-center p-4">
-      <div class="alert"></div>
+    <form
+      class="w-50 mx-auto mt-5 bg-white rounded shadow text-center p-4"
+      id="form"
+    >
+      <div class="alert" id="alert"></div>
       <div class="mb-3">
         <label for="" class="form-label fs-3">To-Do List</label>
-        <input type="text" class="form-control" />
+        <input type="text" class="form-control" id="task-input" />
       </div>
       <div class="mb-3">
         <label class="form-check-label">Completed</label>
-        <input type="checkbox" class="form-check-input" />
+        <input type="checkbox" class="form-check-input" id="task-check" />
       </div>
-      <button class="btn btn-primary">submit</button>
+      <button class="btn btn-primary" id="submit-btn" type="submit">
+        submit
+      </button>
     </form>
-    <div class="cart w-50 mx-auto mt-5 rounded">
-      <ul class="list-group list-group-flush shadow-sm rounded">
+    <div class="cart w-50 mx-auto mt-5 rounded" id="tasks-container">
+      <ul class="list-group list-group-flush shadow-sm rounded" id="tasks-list">
         <!-- todo start -->
-        <li
+        <!-- <li
           class="
             list-group-item
             d-flex
@@ -57,7 +63,7 @@
             </button>
           </span>
         </li>
-        <!-- to-do end -->
+        
         <li
           class="
             list-group-item
@@ -75,7 +81,8 @@
             <button class="btn btn-warning text-capitalize">edit</button>
             <button class="btn btn-danger text-capitalize">delete</button>
           </div>
-        </li>
+        </li> -->
+        <!-- todo end -->
       </ul>
     </div>
     <script
@@ -93,5 +100,12 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+      integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./browser-app.js"></script>
   </body>
 </html>
